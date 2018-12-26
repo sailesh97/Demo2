@@ -7,6 +7,8 @@ import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 import axios from '../../axios-order';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
+//import Checkout from '../Checkout/Checkout';
+//import Checkout from '../Checkout/Checkout';
 const INGREDIENT_PRICES = {
   salad: 0.5,
   cheese: 0.4,
@@ -87,7 +89,7 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinueHandler = () => {
-      //alert("You continue!");
+      alert("You continue!");
       this.setState( { loading: true });
       const order = {
         ingredients: this.state.ingredients,
@@ -110,6 +112,7 @@ class BurgerBuilder extends Component {
         .catch( error => {
           this.setState({ loading: false, purchasing: false });
         });
+      //this.props.history.push('/checkout');
 
     }
      
