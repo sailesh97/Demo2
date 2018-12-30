@@ -39,7 +39,7 @@ class ContactData extends Component {
             })
             .catch(error => {
                 this.setState({ loading: false});
-            });                              
+            });    
  }
 
   render() {
